@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>我的博客</title>
+		<style>
+			body {
+				padding-top: 55px;
+			}
+			
+			.ph1 {
+				width: 300px;
+				height: 300px;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- 引入 Bootstrap -->
+		<link href="css/bootstrap.css" rel="stylesheet" />
+
+		<!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+		<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+		<!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+	</head>
+	<body>
+		<!--上边幕布及内容-->
+		<div class="jumbotron text-center">
+			<div class="containe">
+				<h1>欢迎来到我的博客</h1>
+				<p>非常乐意和大家一起交流</p>
+			</div>
+		</div>
+		<!--响应式导航条-->
+		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-nav-collapse">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">我的博客</a>
+			</div>
+			<!--导航条选项-->
+			<div class="collapse navbar-collapse" id="example-nav-collapse">
+				<ul class="nav navbar-nav nav-tabs" id="myTab">
+					<li class="active">
+						<a href="#Home" data-toggle="tab">主页</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							博客<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#cs" data-toggle="tab">CSS</a></li>
+							<li><a href="#ht" data-toggle="tab">HTML</a></li>
+							<li><a href="#jq" data-toggle="tab">jQuery</a></li>
+							<li><a href="#bs" data-toggle="tab">BootStrap</a></li>
+							<li><a href="#js" data-toggle="tab">JavaScript</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#photo" data-toggle="tab">个人相册</a>
+					</li>
+				</ul>
+				<!--搜索框-->
+				<input type="text" />
+				<button type="button" class="btn btn-default navbar-btn">搜索</button>
+				<!--登录及注册按钮-->
+				<form class="navbar-form navbar-right" id="search">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mymodal1">登录</button>
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#mymodal2">注册</button>
+				</form>
+			</div>
+		</nav>
+		<div class="tab-content" id="myTabContent">
+			<!--主页内容-->
+			<div class="tab-pane fade in active" id="Home">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<a href="#">
+								<h2>关于我</h2></a>
+							<a href="#">
+								<h4>我的照片</h4></a>
+							<img style="width: 350px;" src="img/th.jpg" />
+							<a href="#">
+								<h5>关于我的介绍</h5></a>
+							<a href="#">
+								<h2>个人主页</h2></a>
+							<p>大家好，我是liyd,喜欢编程，旅游，游戏，听音乐，动漫！</p>
+							<ul class="nav nav-stacked nav-pills">
+								<li class="active">
+									<a href="#">编程天地</a>
+								</li>
+								<li>
+									<a href="#">音乐天地</a>
+								</li>
+								<li>
+									<a href="#">动漫天地</a>
+								</li>
+								<li>
+									<a href="#">游戏天地</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-sm-8">
+							<div class="row">
+								<div class="col-sm-6">
+									<h4><a href="#">CSS技术</a></h4>
+									<div class="thumbnail">
+										<img class="ph1" src="img/CSS样式图.jpg" />
+										<div class="caption text-center">
+											<p>
+												CSS层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。
+											</p>
+											<button type="button" class="btn btn-primary">查看</button>
+											<button type="button" class="btn btn-default">下载</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<h4><a href="#">HTML</a></h4>
+									<div class="thumbnail">
+										<img class="ph1" src="img/HTML样式图.jpg" />
+										<div class="caption text-center">
+											<p>
+												超文本标记语言(Hyper Text Markup Language)，标准通用标记语言下的一个应用。HTML 不是一种编程语言，而是一种标记语言 (markup language)，是网页制作所必备的。
+											</p>
+											<button type="button" class="btn btn-primary">查看</button>
+											<button type="button" class="btn btn-default">下载</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+							<h4><a href="#">JavaScript</a></h4>
+							<div class="thumbnail">
+								<img style="width: 300px ;height: 300px;" src="img/JavaScript样式图.jpg" />
+								<div class="caption text-center">
+									<p>
+										JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。
+										它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。
+									</p>
+									<button type="button" class="btn btn-primary">查看</button>
+									<button type="button" class="btn btn-default">下载</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<h4><a href="#">Bootstrap</a></h4>
+							<div class="thumbnail">
+								<img style="width: 300px ;height: 300px;" src="img/Bootstrap样式图.png" />
+								<div class="caption text-center">
+									<p>
+										Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。
+										Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。
+									</p>
+									<button type="button" class="btn btn-primary">查看</button>
+									<button type="button" class="btn btn-default">下载</button>
+								</div>
+							</div>
+						</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--博客内容-->
+			<div class="tab-pane fade" id="cs">
+				<h2>CSS教程</h2>
+				<span class="label label-primary">入门</span>
+				<span class="label label-warning">容易</span>
+				<span class="label label-success">易用</span>
+				<h4>css介绍</h4>
+				<p>本模块带领你从 CSS 如何工作的基础知识进行入门，具体包括：
+					选择器和属性，编写 CSS 规则，将 CSS 应用于 HTML，如何在 CSS 中规范长度、颜色和其他单位，层叠和继承，盒模型基础，以及调试 CSS。
+					一个文档通常是用标记语言结构化的文本文件- HTML是最常见的标记语言，但你也可能会遇到其他标记语言如SVG或XML。
+					向用户呈现文档意味着将其转换为受众可使用的表单。浏览器（如Firefox，Chrome或Edge）旨在以可视方式呈现文档，例如，在计算机屏幕，投影仪或打印机上。
+				</p>
+				<p>
+					CSS可用于非常基本的文档文本样式 - 例如更改标题和链接的颜色和大小。它可用于创建布局 - 例如将单列文本转换为具有主内容区域和侧栏以获取相关信息的布
+					局。它甚至可以用于动画等效果。有关具体示例，请查看本段中的链接。
+				</p>
+				<h4>样式化文本</h4>
+				<p>
+					这里我们将会看到文本格式化的基础，具体包括：设置字体、粗细和倾斜，行和字符间距，以及阴影和其他文本特性。
+					我们通过研究在个人页面上应用自定义字体，并样式化列表和链接的方式完善本模块。
+				</p>
+				<p>
+					正如你已经在你使用 HTML 和 CSS 完成工作时所经历的一样，元素中的文本是布置在元素的内容框中。
+					以内容区域的左上角作为起点 (或者是右上角，是在 RTL 语言的情况下)，一直延续到行的结束部分。一旦达到行的尽头，它就会进到下一行，
+					然后继续，再接着下一行，直到所有内容都放入了盒子中。文本内容表现地像一些内联元素，被布置到相邻的行上，除非到达了行的尽头，否则不会换行，
+					或者你想强制地，手动地造成换行的话，你可以使用 &lt;br&gt;元素。
+				</p>
+				<h4>样式化盒子</h4>
+				<p>
+					接下来，我们将会看到样式化盒子，它是向着构建网页布局方向前进的基础步骤之一。
+					在本模块，我们概括了盒子模型，然后研究通过在盒中应用这些方式控制盒布局：设置内边距、边框、外边距，
+					设置自定义背景颜色、图片和其他特性，以及诸如阴影、过滤器之类的高级特性。
+				</p>
+				<p>
+					CSS中的所有内容都有一个框，理解这些框是能够使用CSS创建布局或将项目与其他项对齐的关键。
+					在本课中，我们将对CSS Box模型进行适当的研究，以便您可以了解它的工作原理以及与之相关的术语，
+					从而进入更复杂的布局任务。
+				</p>
+				<h4>css布局</h4>
+				<p>
+					到这里，我们已经了解了 CSS 基础：如何样式化文本，以及如何样式化和操作内置个人内容的盒模型。
+					现在是时候研究“如何相对于可视区域将你的盒子彼此间放置于正确位置”了。我们到此已经覆盖了所有预备知识，因此现在能够深入学习 CSS 布局，
+					研究不同的显示设置，包括浮动和定位在内的传统布局方法，以及像如弹性盒（flexbox）之类新近流行的布局工具。
+				</p>
+				<p>
+					网格系统是CSS布局中使用的另一个非常常见的特征，其趋向于使用浮动或其他布局特征来实现。
+					您可以将布局设为一定数量的列，然后将内容列放在这些虚拟列中。在本文中，我们将探讨创建网格系统的基本思想，
+					使用网格框架提供的现成网格系统，并通过实验CSS网格——一个新生的新的浏览器功能，使在网上实现网格设计更容易结束。
+				</p>
+				<ul class="pagination">
+					<li><a href="#">首页</a></li>
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&gt;</a></li>
+				</ul>
+				<!--<ul class="pager">
+					<li class="previous"><a href="#">上一页</a></li>
+					<li class="next"><a href="#">下一页</a></li>
+				</ul>-->
+			</div>
+			<div class="tab-pane fade" id="ht">
+				<h2>HTML教程</h2>
+				<span class="label label-primary">入门</span>
+				<span class="label label-warning">容易</span>
+				<span class="label label-success">易用</span>
+				<h4>HTML简介</h4>
+				<p>
+					超文本标记语言(Hyper Text Markup Language)，标准通用标记语言下的一个应用。
+					HTML 不是一种编程语言，而是一种标记语言 (markup language)，是网页制作所必备的。
+					“超文本”就是指页面内可以包含图片、链接，甚至音乐、程序等非文字元素。超文本标记语言(或超文本标签语言)的结构包括“头”部分和“主体”部分，
+					其中“头”部提供关于网页的信息，“主体”部分提供网页的具体内容。
+				</p>
+				<h4>HTML定义</h4>
+				<p>
+					超级文本标记语言是标准通用标记语言下的一个应用，也是一种规范，一种标准，它通过标记符号来标记要显示的网页中的各个部分。
+					网页文件本身是一种文本文件，通过在文本文件中添加标记符，可以告诉浏览器如何显示其中的内容（如：文字如何处理，画面如何安排，图片如何显示等）。
+					浏览器按顺序阅读网页文件，然后根据标记符解释和显示其标记的内容，对书写出错的标记将不指出其错误，且不停止其解释执行过程，编制者只能通过显示效果来分析出错原因和出错部位。
+					但需要注意的是，对于不同的浏览器，对同一标记符可能会有不完全相同的解释，因而可能会有不同的显示效果。
+				</p>
+				<h4>语言特点</h4>
+				<p>超级文本标记语言文档制作不是很复杂，但功能强大，支持不同数据格式的文件镶入，这也是万维网（WWW）盛行的原因之一，其主要特点如下：</p>
+				<ol>
+					<li>简易性：超级文本标记语言版本升级采用超集方式，从而更加灵活方便。</li>
+					<li>可扩展性：超级文本标记语言的广泛应用带来了加强功能，增加标识符等要求，超级文本标记语言采取子类元素的方式，为系统扩展带来保证</li>
+					<li>平台无关性：虽然个人计算机大行其道，但使用MAC等其他机器的大有人在，超级文本标记语言可以使用在广泛的平台上，这也是万维网（WWW）盛行的另一个原因。</li>
+					<li>通用性：另外，HTML是网络的通用语言,一种简单、通用的全置标记语言。它允许网页制作人建立文本与图片相结合的复杂页面，这些页面可以被网上任何其他人浏览到，无论使用的是什么类型的电脑或浏览器。</li>
+				</ol>
+				<h4>相关要求</h4>
+				<ol>
+					<li>文本标记语言源程序的文件扩展名默认使用htm（磁盘操作系统DOS限制的外语缩写为扩展名）或html（外语缩写为扩展名），以便于操作系统或程序辨认，除自定义的汉字扩展名。
+						在使用文本编辑器时，注意修改扩展名。而常用的图像文件的扩展名为gif和jpg。</li>
+					<li>超文本标记语言源程序为文本文件，其列宽可不受限制，即多个标记可写成一行，
+						甚至整个文件可写成一行；若写成多行，浏览器一般忽略文件中的回车符（标记指定除外）；对文件中的空格通常也不按源程序中的效果显示。
+						完整的空格可使用特殊符号（实体符）“nbsp（注意此字母必须小写，方可空格）”表示非换行空格；
+						表示文件路径时使用符号“/”分隔，文件名及路径描述可用双引号也可不用引号括起。</li>
+					<li>标记符中的标记元素用尖括号括起来，带斜杠的元素表示该标记说明结束；大多数标记符必须成对使用，以表示作用的起始和结束；
+						标记元素忽略大小写，即其作用相同，但完整的空格可使用特殊符号“&nbsp（注意此字母必须小写，方可空格）”；
+						许多标记元素具有属性说明，可用参数对元素作进一步的限定，多个参数或属性项说明次序不限，其间用空格分隔即可；一个标记元素的内容可以写成多行。</li>
+					<li>标记符号，包括尖括号、标记元素、属性项等必须使用半角的西文字符，而不能使用全角字符。</li>
+					<li>HTML注释由"&lt;号开始，由符号”&gt;“结束结束，。注释内容可插入文本中任何位置。任何标记若在其最前插入惊叹号，即被标识为注释，不予显示。 [4]</li>
+				</ol>
+				<ul class="pagination">
+					<li><a href="#">&lt;</a></li>
+					<li><a href="#">1</a></li>
+					<li  class="active"><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&gt;</a></li>
+				</ul>
+			</div>
+			<div class="tab-pane fade" id="jq">
+				<h2>jQuery教程</h2>
+				<span class="label label-primary">入门</span>
+				<span class="label label-warning">容易</span>
+				<span class="label label-success">易用</span>
+				<h4>jQuery简介</h4>
+				<p>Query是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。
+					jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，
+					提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互
+				</p>
+				<p>jQuery的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口；具有高效灵活的css选择器，并且可对CSS选择器进行扩展；拥有便捷的插件扩展机制和丰富的插件。
+					jQuery兼容各种主流浏览器，如IE 6.0+、FF 1.5+、Safari 2.0+、Opera 9.0+等。
+				</p>
+				<h4>编程工具</h4>
+				<p>Notepad++：一套有特色的自由软件的纯文字编辑器，有完整的中文化接口及支持多国语言编写的功能。
+					它的功能比Windows中的 Notepad（记事本）强大，除了可以用来制作一般的纯文字说明文件，也十分适合当作编写电脑程序的编辑器。
+					Notepad++ 不仅有语法高亮度显示，也有语法折叠功能，并且支持宏以及扩充基本功能的外挂模组。
+				</p>
+				<p>Brackets：一个免费、开源且跨平台的 HTML/CSS/JavaScript 前端 WEB 集成开发环境 （IDE工具）。
+					该项目由 Adobe 创建和维护，根据MIT许可证发布，支持Windows、Linux平台。Brackets的特点是简约、优雅、快捷，它的核心目标是减少在开发过程中那些效率低下的重复性工作，
+					例如浏览器刷新，修改元素的样式，搜索功能等等。
+				</p>
+				<p>JS Nice：一款让经过混淆处理的JavaScript代码可读更好的工具。它使用一种用于JavaScript代码美化的去混淆和去压缩引擎。
+					JSNice采用先进的机器学习和程序分析技术，从可用的开源项目学习命名和类型规律。
+				</p>
+				<h4>语言特点</h4>
+				<ol>
+					<li>快速获取文档元素</li>
+					<li>提供漂亮的页面动态效果</li>
+					<li>创建AJAX无刷新网页</li>
+					<li>提供对JavaScript语言的增强</li>
+					<li>增强的事件处理</li>
+					<li>更改网页内容</li>
+				</ol>
+				<ul class="pagination">
+					<li><a href="#">&lt;</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li class="active"><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&gt;</a></li>
+				</ul>
+			</div>
+			<div class="tab-pane fade" id="bs">
+				<h2>BootStrap教程</h2>
+				<span class="label label-primary">入门</span>
+				<span class="label label-warning">容易</span>
+				<span class="label label-success">易用</span>
+				<h4>BootStrap简介</h4>
+				<p>Bootstrap是美国Twitter公司的设计师Mark Otto和Jacob Thornton合作基于HTML、CSS、JavaScript 开发的简洁、直观、强悍的前端开发框架，使得 Web 开发更加快捷。
+					Bootstrap提供了优雅的HTML和CSS规范，它即是由动态CSS语言Less写成。Bootstrap一经推出后颇受欢迎，一直是GitHub上的热门开源项目，
+					包括NASA的MSNBC（微软全国广播公司）的Breaking News都使用了该项目。 国内一些移动开发者较为熟悉的框架，如WeX5前端开源框架等，也是基于Bootstrap源码进行性能优化而来。
+				</p>
+				<h4>包含内容</h4>
+				<ol>
+					<li>基本结构：Bootstrap 提供了一个带有网格系统、链接样式、背景的基本结构。这将在Bootstrap 基本结构部分详细讲解。</li>
+					<li>CSS：Bootstrap 自带以下特性：全局的 CSS设置、定义基本的 HTML 元素样式、可扩展的 class，以及一个先进的网格系统。这将在Bootstrap CSS部分详细讲解。</li>
+					<li>组件：Bootstrap 包含了十几个可重用的组件，用于创建图像、下拉菜单、导航、警告框、弹出框等等。这将在布局组件部分详细讲解。</li>
+					<li>JavaScript 插件：Bootstrap包含了十几个自定义的jQuery 插件。您可以直接包含所有的插件，也可以逐个包含这些插件。这将在Bootstrap插件部分详细讲解。</li>
+					<li>定制：您可以定制Bootstrap的组件、LESS 变量和jQuery 插件来得到您自己的版本。</li>
+				</ol>
+				<h4>支持组件</h4>
+				<p>
+					Bootstrap中包含了丰富的Web组件，根据这些组件，可以快速的搭建一个漂亮、功能完备的网站。其中包括以下组件：
+				           下拉菜单、按钮组、按钮下拉菜单、导航、导航条、路径导航、分页、排版、缩略图、警告对话框、进度条、媒体对象等
+				</p>
+				<h4>支持插件</h4>
+				<p>
+					Bootstrap自带了13个jQuery插件，这些插件为Bootstrap中的组件赋予了“生命”。其中包括：
+				        模式对话框、标签页、滚动条、弹出框等。
+				</p>
+				<ul class="pagination">
+					<li><a href="#">&lt;</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li class="active"><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&gt;</a></li>
+				</ul>
+			</div>
+			<div class="tab-pane fade" id="js">
+				<h2>JavaScrip教程</h2>
+				<span class="label label-primary">入门</span>
+				<span class="label label-warning">容易</span>
+				<span class="label label-success">易用</span>
+				<h4>JavaScript简介</h4>
+				<p>
+					Javascript，一种高级编程语言，通过解释执行，是一门动态类型，面向对象（基于原型）的直译语言。
+					它已经由欧洲电脑制造商协会通过ECMAScript实现语言的标准化。它被世界上的绝大多数网站所使用，也被世界主流浏览器（Chrome、IE、FireFox等）支持。
+					JavaScript是一门基于原型、函数先行的语言，是一门多范式的语言，它支持面向对象编程，命令式编程，以及函数式编程。
+					它提供语法来操控文本、数组、日期以及正则表达式等，不支持I/O，比如网络、存储和图形等，但这些都可以由它的宿主环境提供支持。
+					JavaScript虽与Java有很多相似性，但这两门编程语言从设计之初就有很大的不同，JavaScript的语言设计主要受到了Self（一种基于原型的编程语言）和Scheme（一门函数式编程语言）的影响。
+					在语法结构上它又与C语言有很多相似（例如if条件语句、while循环、switch语句、do-while循环等）。
+				</p>
+				<h4>组成部分</h4>
+				<p>
+					一个完整的 JavaScript 实现是由以下 3 个不同部分组成的：核心（ECMAScript）、文档对象模型（Document Object Model，简称DOM）、浏览器对象模型（Browser Object Model，简称BOM）。
+				</p>
+				<h4>基本特点</h4>
+				<p>
+					网页嵌入技术有：Javascript、VBScript、Document Object Model（DOM，文档对象模型）、Layers和Cascading Style Sheets（CSS，层叠样式表），这里主要讲Javascript。
+				</p>
+				<p>
+					Javascript就是适应动态网页制作的需要而诞生的一种新的编程语言，如今越来越广泛地使用于Internet网页制作上。
+					Javascript是由 Netscape公司开发的一种脚本语言（scripting language），或者称为描述语言。在HTML基础上，使用Javascript可以开发交互式Web网页。
+					Javascript的出现使得网页和用户之间实现了一种实时性的、动态的、交互性的关系，使网页包含更多活跃的元素和更加精彩的内容。运行用Javascript编写的程序需要能支持Javascript语言的浏览器。
+					Netscape公司 Navigator 3．0以上版本的浏览器都能支持Javascript程序，微软公司Internet Explorer 3．0以上版本的浏览器基本上支持Javascript。
+					微软公司还有自己开发的Javascript，称为JScript。Javascript和Jscript基本上是相同的，只是在一些细节上有出入。
+					 Javascript短小精悍，又是在客户机上执行的，大大提高了网页的浏览速度和交互能力。 同时它又是专门为制作Web网页而量身定做的一种简单的编程语言。
+				</p>
+				<p>JavaScript 使网页增加互动性。JavaScript 使有规律地重复的HTML文段简化，减少下载时间。JavaScript 能及时响应用户的操作，对提交表单做即时的检查，无需浪费时间交由CGI 验证。
+					JavaScript 的特点是无穷无尽的，只要你有创意。
+				</p>
+				<ul class="pagination">
+					<li><a href="#">&lt;</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li class="active"><a href="#">5</a></li>
+					<li><a href="#">尾页</a></li>
+				</ul>
+			</div>
+			<!--个人相册内容-->
+			<div class="tab-pane fade" id="photo">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/西安城墙.jpeg" />
+							<div class="caption">
+								<h3>西安城墙</h3>
+								<p>
+									又称西安明城墙，是中国现存规模最大，保存最完整的古代城垣。
+									与平遥城墙、荆州城墙、兴城城墙等并列为中国现存最完好的四座古城墙。
+									城墙周围有护城河环绕，著名的西安钟鼓楼就位于城墙中心。
+									可以选择骑自行车环绕城门一圈，城门上的道路并不平整，骑车要注意安全。
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/书院门.jpeg" />
+							<div class="caption">
+								<h3>西安书院门</h3>
+								<p>
+									西安人通常所说的书院门，指碑林到关中书院门口的一条步行街。
+									街口有一座古韵十足的高大牌楼，上书“书院门”三个金色颜体大字。
+									街道两旁青一色仿古建筑，地面为青石铺砌，向东走到尽头便是碑林。
+									白天是书画一条街，文学气息浓郁；晚上是小吃一条街，西安特色浓郁。
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/兵马俑.jpeg" />
+							<div class="caption">
+								<h3>西安兵马俑</h3>
+								<p>
+									是秦始皇陵园中一处大型从葬坑，以兵马俑为基础
+									共有3个兵马俑坑。一号坑是战车和步兵相间的主力军阵，约有6000个真人大小的陶俑。
+									二号坑由战车、骑兵、弩兵混合编组。三号坑是军阵的指挥系统。
+									出土的兵马俑分为将军俑，武士俑，车士俑等。每个陶俑的五官神情各不相同。
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/华清宫.jpeg" />
+							<div class="caption">
+								<h3>西安华清宫</h3>
+								<p>
+									华清宫自古以来就是皇家游览沐浴的胜地，据说曾经是杨贵妃沐浴的地方。
+									这里遗留有比较完整的周、秦、汉、唐、明、清等历代文化遗址、园林景观、古建筑及古树名木等文物资源。
+									尤以唐明皇与杨贵妃缠绵的爱情故事和震惊中外的“西安事变”而蜚声天下。 
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/回民街.jpeg" />
+							<div class="caption">
+								<h3>西安回民街</h3>
+								<p>
+									西安回族的聚集区，由多条道路组成，当地人也称其为“回坊”，是初到西安的必去之处。
+									街道两旁有琳琅满目的小吃店铺，可以边吃美食边感受这里深厚的文化底蕴。
+									肉夹馍、东南亚甑糕、泡馍、凉皮等近300种特色风味小吃均能在回民街品尝到，让人流连忘返。
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/大唐芙蓉园.jpeg" />
+							<div class="caption">
+								<h3>大唐芙蓉园</h3>
+								<p>
+									西北地区最大的文化主题公园，拥有国内最大的仿唐建筑群。
+									园内有两个“全球最大”，全球最大户外香化工程、全球最大水幕电影表演。
+									夜景色彩璀璨，灯火辉煌中的唐文化长廊、芳林苑、紫云楼等地，处处灿烂夺目。
+									园区有祈天鼓舞、“教坊乐舞”宫廷演出、“艳影霓裳”服饰表演等。
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/大慈恩寺.jpg" />
+							<div class="caption">
+								<h3>大慈恩寺</h3>
+								<p>
+									大雁塔又名大慈恩寺塔，原称慈恩寺西院浮屠（浮屠即塔的意思），唐代玄奘为藏经典而修建。
+									位于大慈恩寺内，是中国唐朝佛教建筑艺术杰作，登上塔顶，凭栏远眺，长安风貌尽收眼底。
+									塔身七层，通高64.5米，楼阁式的方形砖塔，由塔座、塔身、塔顶组成，各层逐渐收分，呈棱锥状 
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/小雁塔.jpeg" />
+							<div class="caption">
+								<h3>西安小雁塔</h3>
+								<p>
+									又名荐福寺塔，始建于唐代，现位于西安博物院内。
+									小雁塔环境清幽，经受了1200多年风雨的侵袭和70余次地震，历史上曾经历过三次离合。
+									塔内现今还保存一座1192年铸造的巨大铁钟，钟钮为双獬豸造型，钟上有铭文约千字，多为经咒语。此钟钟声宏亮，“雁塔晨钟”也被誉为关中八景之一。 
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/永宁门.jpeg" />
+							<div class="caption">
+								<h3>西安永宁门</h3>
+								<p>
+									永宁门是西安城墙的正南门，建于隋代初，当年它是皇城南面三座城门中偏东的一座，原叫安上门，
+									唐末韩建缩建新城时留作南门，明代改为永宁门。现永宁门为环岛交通，门外有南门广场，门内为南大街，门外接南关正街。
+									地铁有永宁门站，出站是永宁门外的广场。
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/秦始皇陵.jpeg" />
+							<div class="caption">
+								<h3>秦始皇陵</h3>
+								<p>
+									中国历史上第一个皇帝陵园，其巨大的规模、丰富的陪葬物居历代帝王陵墓之首。
+									陵园按照秦始皇死后照样享受荣华富贵的原则，仿照秦国都城咸阳的布局建造，大体呈回字形。
+									陵区内已探明的大型地面建筑为寝殿、便殿、园寺吏舍等遗址。
+									由于考古技术有限，秦始皇陵墓尚未进行考古挖掘。
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/钟鼓楼广场.jpeg"/>
+							<div class="caption">
+								<h3>钟鼓楼广场</h3>
+								<p>
+									又叫尚书省广场，位于西安市中心，面积达6万平方米，仅次于北京的天安门广场。
+									这里曾是盛唐尚书省所在地，为当时执行国家政务的最高行政机关。
+									广场东侧屹立有六百年历史的钟楼，西侧屹立全国最大的鼓楼。
+									广场北侧建有同盛祥、德发长、王海棠等久负盛名的老字号店铺。
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="thumbnail">
+							<img style="height: 270px;" src="img/陕西历史博物馆.jpeg" />
+							<div class="caption">
+								<h3>西安华清宫</h3>
+								<p>
+									位于西安大雁塔的西北侧，是中国第一座大型现代化国家级博物馆，它的建成标志着中国博物馆事业迈入了新的发展里程。
+									馆藏文物多达37万余件，从远古人类的简单石器，到1840年前社会生活中的各类器物，时间跨度长达一百多万年。
+									其中的商周青铜器精美绝伦，历代陶俑千姿百态，汉唐金银器独步全国，唐墓壁画举世无双。 
+								</p>
+							</div>
+							<div class="text-center">
+								<button type="button" class="btn btn-primary">查看</button>&nbsp;&nbsp;&nbsp;
+								<button type="button" class="btn btn-default">下载</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="mymodal1" role="dialog" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4>登录</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-inline" role="form">
+							<div class="form-group">
+								<label for="name">用户名:</label>
+								<input type="text" id="name" class="form-control" />
+							</div><br /><br />
+							<div class="form-group">
+								<label for="pass">密&nbsp;&nbsp;&nbsp;码:</label>
+								<input type="password" id="pass" class="form-control" />
+							</div>
+						</form>
+						<!--<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="name">用户名:</label>
+								<div class="col-sm-10">
+									<input type="text" id="name" class="form-control" placeholder="请输入用户名" />
+									<span class="help-block">请输入用户名</span>
+								</div>
+							</div>
+						</form>-->
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" onclick="denglu()" data-dismiss="modal">登录</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="mymodal2" role="dialog" tabindex="-1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4>注册</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-inline" role="form">
+							<div class="form-group">
+								<label for="name">用户名:</label>
+								<input type="text" id="name"  class="form-control"/>
+							</div><br /><br />
+							<div class="form-group">
+								<label for="pass">密&nbsp;&nbsp;&nbsp;码:</label>
+								<input type="password" id="pass" class="form-control"  />
+							</div><br /><br />
+							<div class="form-group">
+								<label for="pass2">确认密码:</label>
+								<input type="password" id="pass2" class="form-control" />
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="denglu()">注册</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="jumbotron text-center">
+				<div class="container">
+					<h5>豫ICP备19951209|京公安局备案</h5>
+					<h5>liyd&copy;1990-2020 mengled.ltd</h5>
+				</div>
+			</div>
+	</body>
+	<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+	<script src="js/jQuery-1.11.0.js"></script>
+	<!-- 包括所有已编译的插件 -->
+	<script src="js/bootstrap.js"></script>
+	<script>
+		function denglu(){
+			$("#search").html("<font color='white'>欢迎您的登录！</font>");
+		};
+		function a(){
+			$("#ht").tab("show")
+		}
+	</script>
+</html>
